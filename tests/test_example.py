@@ -1,4 +1,4 @@
-from TtsNyamrubData.validation import add_one
+from TtsNyamrubData.contribution import add_one
 
 
 def test_add_one():
