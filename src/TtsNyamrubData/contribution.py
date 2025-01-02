@@ -26,7 +26,7 @@ def transform_csv(input_file, output_file):
 
         # Transform the columns
         df["origin_id"] = df["file_name"]
-        df["source"] = df["target"]
+        df["source"] = df["etext_transcript"]
         df["target"] = ""  # Set target to empty string
         df["score"] = df["level"].apply(determine_score)
         df["target_dialect"] = ""  # Set target_dialect to empty string
@@ -57,7 +57,7 @@ def transform_csv(input_file, output_file):
 
 
 # Example usage
-input_csv = "data/contribution/updated_file.csv"  # Replace with your input file path
-output_csv = "data/tts_contribution.csv"  # Replace with your desired output file path
+input_csv = "data/contribution/sorted_level.csv"  # Replace with your input file path
+output_csv = "data/contribution/final_tts_contribution.csv"  # Replace with your desired output file path
 
 transform_csv(input_csv, output_csv)
